@@ -5,7 +5,6 @@ const WebSocket = require('ws');
 const app = express();
 app.use(express.static('public'));
 
-const port = 6969;
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
@@ -19,6 +18,5 @@ wss.on('connection', function connection(ws) {
   });
 });
 
-server.listen(port, function () {
-  console.log(`Server is listening on ${port}!`);
-});
+const port = process.env.PORT || 7654;
+server.listen(port, () => console.log(`listening on ${port}!`));
