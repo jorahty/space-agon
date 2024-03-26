@@ -3,21 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Space Agones</title>
 
+    <link rel="stylesheet" href="style.css" />
     <script defer src="index.js"></script>
   </head>
   <body>
-    <h1>Real Time Messaging</h1>
-
     <pre id="messages" style="height: 400px; overflow: scroll"></pre>
 
-    <input
-      type="text"
-      id="messageBox"
-      placeholder="Type your message here"
-      style="display: block; width: 100%; margin-bottom: 10px; padding: 10px" />
-
-    <button id="send" title="Send Message!" style="width: 100%; height: 30px">Send Message</button>
+    <div style="display: flex; gap: 10px">
+      <input id="messageBox" placeholder="Aa" style="flex-grow: 1; padding: 10px" />
+      <button id="send">Send</button>
+    </div>
   </body>
 </html>
