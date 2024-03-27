@@ -1,0 +1,14 @@
+apiVersion: agones.dev/v1
+kind: GameServer
+metadata:
+  generateName: dedicated-
+spec:
+  ports:
+    - name: default
+      portPolicy: Dynamic
+      containerPort: 7654
+  template:
+    spec:
+      containers:
+        - name: dedicated
+          image: jorahty/space-agon:latest
