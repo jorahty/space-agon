@@ -7,8 +7,9 @@ spec:
     - name: default
       portPolicy: Dynamic
       containerPort: 7654
+      protocol: TCP
   template:
     spec:
       containers:
         - name: dedicated
-          image: jorahty/space-agon:latest
+          image: jorahty/space-agon:0.1
