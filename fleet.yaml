@@ -1,0 +1,21 @@
+apiVersion: agones.dev/v1
+kind: Fleet
+metadata:
+  name: dedicated
+spec:
+  replicas: 2
+  template:
+    spec:
+      ports:
+        - name: default
+          portPolicy: Dynamic
+          containerPort: 7654
+          protocol: TCP
+      health:
+        initialDelaySeconds: 30
+        periodSeconds: 3
+      template:
+        spec:
+          containers:
+            - name: dedicated
+              image: jorahty/space-agon:0.2
